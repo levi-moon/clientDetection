@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+engine:<textarea id="showAreaEngine" rows="5" cols="80"></textarea><br />
+browser:<textarea id="showAreaBrowser" rows="5" cols="80"></textarea><br />
+system:<textarea id="showAreaSystem" rows="5" cols="80"></textarea><br />
+
+<script type="text/javascript" src="clientDetection.js"></script>
+<script type="text/javascript">
+    var clientData=client;
+    var engineData=JSON.stringify(clientData.engine);
+    var browserData=JSON.stringify(clientData.browser);
+    var systemData=JSON.stringify(clientData.system);
+    document.getElementById("showAreaEngine").value=engineData;
+    document.getElementById("showAreaBrowser").value=browserData;
+    document.getElementById("showAreaSystem").value=systemData;
+</script>
+</body>
+</html>
